@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  srv:
+    command: "sh -c 'yarn install && yarn run dev'"
+    container_name: srv
+    build:
+      context: .
+    volumes:
+      - ./:/app:rw
+      - srv-node-modules:/app/node_modules:rw
+    networks:
+      - subnet_0
+    restart: on-failure
+
+networks:
+  subnet_0:
+    driver: bridge
+
+volumes:
+  srv-node-modules:
