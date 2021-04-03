@@ -9,3 +9,7 @@ docker-compose up -d
 yarn install
 yarn build
 ```
+
+## Architecture
+
+![Architecture](./images/architecture.svg)

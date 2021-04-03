@@ -2,7 +2,6 @@ version: "3.4"
 
 services:
   srv:
-    command: "sh -c 'yarn install && yarn run dev'"
     container_name: srv
     build:
       context: .
